@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'recipes'   # app criado, para que o Django saiba que ele existe e possa 
+    # ser usado.
 ]
 
 MIDDLEWARE = [

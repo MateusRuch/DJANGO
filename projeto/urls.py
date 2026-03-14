@@ -15,8 +15,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
+
+# HTTP request
+# HTTP response
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),  # O path é uma função que recebe dois
+    # argumentos: o primeiro é a string que representa a URL
+    # e o segundo é a função que será chamada quando essa URL for acessada.
+    path('', include("recipes.urls")),  # o include é uma função que permite
+    # incluir URLs de outro módulo..
+    # No caso de uma string vazia, o include irá procurar as URLs do módulo
+    # recipes.urls e irá redirecionar para elas.
+
 ]
